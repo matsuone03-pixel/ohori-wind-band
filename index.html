@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>福岡大学附属大濠高等学校 吹奏楽部｜Ohori Wind Band</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#5e1220; --maroon-deep:#3d0a14; --red:#d9232e; --red-bright:#f0343f;
+  --ink:#17130f; --paper:#f7f3ec; --paper2:#efe8da; --card:#fffdf8;
+  --muted:#5d564c; --line:#d8cfbd; --gold:#b08a3e;
+  --bg:var(--paper); --fg:var(--ink); --sub:var(--muted);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#14100d; --fg:#f2ece1; --sub:#b9ae9c; --card:#1e1915; --paper2:#1a1512; --line:#3a3128; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Zen Kaku Gothic New",sans-serif;line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.num{font-family:"Oswald",sans-serif;letter-spacing:.02em}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(20,8,10,.92);backdrop-filter:blur(8px);color:#f5efe4}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.brand{font-weight:900;font-size:15px;letter-spacing:.06em;white-space:nowrap}
+.brand small{display:block;font-size:10px;letter-spacing:.28em;color:#e8b7bc;font-weight:700}
+.navlinks{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.navlinks::-webkit-scrollbar{display:none}
+@media(max-width:640px){nav .wrap{flex-direction:column;align-items:flex-start;height:auto;padding-top:10px;padding-bottom:8px;gap:2px}.navlinks{flex-wrap:wrap;overflow:visible}.navlinks a{padding:7px 8px}}
+.navlinks a{color:#f5efe4;text-decoration:none;font-size:13px;font-weight:700;padding:10px 10px;white-space:nowrap;border-bottom:3px solid transparent}
+.navlinks a:hover,.navlinks a:focus-visible{border-bottom-color:var(--red)}
+/* ---------- hero ---------- */
+.hero{background:linear-gradient(160deg,var(--maroon-deep) 0%,var(--maroon) 55%,#7a1626 100%);color:#fdf8ee;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 46px,rgba(255,255,255,.035) 46px 48px);pointer-events:none}
+.hero-inner{position:relative;z-index:1;padding-top:64px;padding-bottom:56px}
+.hero .kicker{display:inline-block;border:2px solid var(--red-bright);color:#ffd9dc;font-weight:900;font-size:12px;letter-spacing:.3em;padding:6px 14px;margin-bottom:22px}
+.hero h1{font-size:clamp(34px,9vw,64px);line-height:1.25;font-weight:900;margin:0 0 6px;letter-spacing:.02em}
+.hero h1 .en{display:block;font-family:"Oswald",sans-serif;font-size:clamp(15px,4vw,22px);letter-spacing:.42em;color:#f0b9be;font-weight:600;margin-top:14px}
+.hero .lead{font-size:17px;max-width:640px;margin:20px 0 0;color:#f3e9d8}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.25);border:1px solid rgba(255,255,255,.25);margin-top:40px}
+.hero-stats div{background:rgba(30,5,10,.55);padding:18px 14px}
+.hero-stats .big{font-family:"Oswald",sans-serif;font-size:clamp(30px,7vw,46px);font-weight:700;line-height:1;color:#fff}
+.hero-stats .big em{font-style:normal;color:var(--red-bright);font-size:.55em}
+.hero-stats p{margin:8px 0 0;font-size:12.5px;line-height:1.6;color:#e9dcc8}
+.hero-note{font-size:11.5px;color:#d8c6ae;margin-top:14px}
+@media(max-width:640px){.hero-stats{grid-template-columns:1fr}.hero-stats .big{font-size:40px}}
+/* drill chart graphic */
+.drill{margin-top:44px;border-top:1px solid rgba(255,255,255,.2);padding-top:26px}
+.drill svg{width:100%;height:auto}
+.drill figcaption{font-size:11.5px;color:#d8c6ae;margin-top:8px}
+/* ---------- sections ---------- */
+section{padding:64px 0}
+section.alt{background:var(--paper2)}
+.sec-head{margin-bottom:34px}
+.sec-head .no{font-family:"Oswald",sans-serif;color:var(--red);font-weight:700;letter-spacing:.3em;font-size:13px}
+.sec-head h2{font-size:clamp(26px,6vw,38px);font-weight:900;margin:6px 0 8px;line-height:1.35;border-bottom:4px solid var(--maroon);padding-bottom:12px}
+@media (prefers-color-scheme: dark){.sec-head h2{border-bottom-color:var(--red)}}
+.sec-head p{color:var(--sub);margin:0;max-width:680px}
+.src{font-size:11.5px;color:var(--sub);margin-top:22px}
+.src a{color:var(--maroon);font-weight:700}
+@media (prefers-color-scheme: dark){.src a{color:#f0a0a6}}
+/* reveal：本文は常時表示が既定。画面に入った要素だけが一度だけ軽く浮き上がる（発火しなくても内容は欠落しない） */
+.rv.on{animation:rise .7s ease both}
+@keyframes rise{from{opacity:.3;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.rv.on{animation:none} html{scroll-behavior:auto}}
+/* about */
+.about-grid{display:grid;gap:28px}
+@media(min-width:820px){.about-grid{grid-template-columns:1.2fr .8fr}}
+.facts{border:3px solid var(--ink);background:var(--card)}
+@media (prefers-color-scheme: dark){.facts{border-color:var(--line)}}
+.facts dl{margin:0}
+.facts .row{display:grid;grid-template-columns:110px 1fr;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.facts .row:last-child{border-bottom:none}
+.facts dt{font-weight:900;color:var(--maroon);font-size:14px}
+@media (prefers-color-scheme: dark){.facts dt{color:#f0a0a6}}
+.facts dd{margin:0;font-size:15px}
+.pillars{display:grid;gap:14px}
+.pillar{border-left:8px solid var(--red);background:var(--card);padding:18px 20px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.pillar h3{margin:0 0 6px;font-size:19px;font-weight:900}
+.pillar h3 .en{font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.25em;color:var(--red);display:block}
+.pillar p{margin:0;font-size:14.5px;color:var(--sub)}
+/* timeline */
+.tl{position:relative;margin-left:8px;border-left:3px solid var(--maroon)}
+@media (prefers-color-scheme: dark){.tl{border-left-color:var(--red)}}
+.tl-item{position:relative;padding:0 0 30px 26px}
+.tl-item::before{content:"";position:absolute;left:-9px;top:8px;width:15px;height:15px;background:var(--red);border:3px solid var(--bg);border-radius:50%}
+.tl-item .yr{font-family:"Oswald",sans-serif;font-weight:700;font-size:22px;color:var(--maroon)}
+@media (prefers-color-scheme: dark){.tl-item .yr{color:#f0a0a6}}
+.tl-item h3{margin:2px 0 6px;font-size:17px;font-weight:900}
+.tl-item p{margin:0;font-size:14.5px;color:var(--sub)}
+.badge{display:inline-block;font-size:12px;font-weight:900;padding:2px 10px;margin-right:6px;vertical-align:2px}
+.b-gold{background:#8a6a1f;color:#fff}.b-silver{background:#5c5c5c;color:#fff}.b-red{background:var(--red);color:#fff}.b-dark{background:#17130f;color:#fff}
+/* marching feature */
+.feature{background:#100a08;color:#f5efe4;margin:0}
+.feature h2{border-bottom-color:var(--red);color:#fff}
+.feature .sec-head p{color:#cbbfa9}
+.uniform{display:grid;gap:22px;align-items:center}
+@media(min-width:820px){.uniform{grid-template-columns:.9fr 1.1fr}}
+.uniform-card{border:2px solid #4a3a30;padding:22px;background:#1a110d}
+.uniform-card h3{margin:0 0 10px;font-size:20px;font-weight:900}
+.uniform-card p{font-size:15px;color:#ddd0ba;margin:0 0 12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chips span{border:1.5px solid var(--red-bright);color:#ffd9dc;font-size:12.5px;font-weight:700;padding:5px 12px}
+.showlist{display:grid;gap:10px;margin-top:26px}
+@media(min-width:700px){.showlist{grid-template-columns:1fr 1fr}}
+.showlist div{border:1px solid #4a3a30;padding:14px 16px;background:#171009}
+.showlist b{display:block;font-size:15px}
+.showlist span{font-size:13px;color:#cbbfa9}
+/* concert */
+.concert-card{border:3px solid var(--maroon);background:var(--card);padding:26px 22px}
+@media (prefers-color-scheme: dark){.concert-card{border-color:var(--red)}}
+.concert-card .when{font-family:"Oswald",sans-serif;font-size:clamp(26px,6vw,40px);font-weight:700;line-height:1.2}
+.concert-card .when small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:14px;font-weight:700;color:var(--red);letter-spacing:.15em;margin-bottom:6px}
+.parts{display:grid;gap:12px;margin-top:22px}
+@media(min-width:700px){.parts{grid-template-columns:repeat(3,1fr)}}
+.parts div{border-top:5px solid var(--red);background:var(--paper2);padding:14px 16px}
+.parts b{display:block;font-size:16px;margin-bottom:4px}
+.parts p{margin:0;font-size:13.5px;color:var(--sub)}
+/* year flow */
+.flow{display:grid;gap:0;border:2px solid var(--line)}
+.flow .row{display:grid;grid-template-columns:86px 1fr;gap:14px;padding:16px 18px;border-bottom:1px solid var(--line);background:var(--card)}
+.flow .row:last-child{border-bottom:none}
+.flow .season{font-weight:900;color:var(--maroon);font-size:15px}
+@media (prefers-color-scheme: dark){.flow .season{color:#f0a0a6}}
+.flow p{margin:0;font-size:14.5px}
+.flow p small{display:block;color:var(--sub);font-size:12.5px}
+/* join + access */
+.join{background:linear-gradient(150deg,var(--maroon-deep),var(--maroon));color:#fdf8ee}
+.join h2{border-bottom-color:var(--red-bright);color:#fff}
+.join p{color:#f0e4cd;max-width:680px}
+.join .big-line{font-size:clamp(22px,5.5vw,32px);font-weight:900;line-height:1.5;margin:0 0 14px}
+.access-grid{display:grid;gap:24px}
+@media(min-width:820px){.access-grid{grid-template-columns:1fr 1fr}}
+.access-box{border:2px solid var(--line);background:var(--card);padding:22px}
+.access-box h3{margin:0 0 10px;font-size:18px;font-weight:900}
+.access-box p{margin:0 0 8px;font-size:15px}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:900;padding:14px 26px;font-size:15px;margin-top:10px;min-height:52px}
+.btn:hover{background:#b31b24}
+.btn.ghost{background:transparent;border:2px solid currentColor}
+.motto{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.motto span{font-weight:900;font-size:17px;border:2px solid var(--maroon);padding:8px 16px;letter-spacing:.12em}
+@media (prefers-color-scheme: dark){.motto span{border-color:var(--red)}}
+/* footer */
+footer{background:#0d0705;color:#cbbfa9;padding:44px 0 54px;font-size:13px}
+footer .disc{border:1.5px solid #57443a;padding:16px 18px;color:#e8dcc4;font-size:13.5px;line-height:1.8}
+footer a{color:#f0a0a6;font-weight:700}
+footer .links{display:flex;flex-wrap:wrap;gap:8px 22px;margin:20px 0}
+footer small{display:block;color:#8d7f6c;margin-top:14px;line-height:1.8}
+</style>
+</head>
+<body>
+
+<nav aria-label="ページ内ナビゲーション">
+  <div class="wrap">
+    <div class="brand">大濠高校 吹奏楽部<small>OHORI WIND BAND</small></div>
+    <div class="navlinks">
+      <a href="#about">部について</a><a href="#results">実績</a><a href="#marching">マーチング</a><a href="#concert">定期演奏会</a><a href="#year">年間活動</a><a href="#join">入部希望の方へ</a><a href="#access">アクセス</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <span class="kicker">MARCHING ／ CONCERT ／ PARADE CONTEST</span>
+    <h1>福岡大学附属<br>大濠高等学校<br>吹奏楽部
+      <span class="en">OHORI WIND BAND — FUKUOKA</span>
+    </h1>
+    <p class="lead">座奏、マーチングコンテスト、マーチングバンド全国大会のショー。「三つの顔」を持つ、約100人の部。フィールドでもステージでも、一切の妥協なく音と動きを突き詰める。</p>
+
+    <div class="hero-stats" role="list" aria-label="主な実績の数字">
+      <div role="listitem"><div class="big">13<em>年連続</em></div><p>マーチングバンド全国大会への連続出場 ※</p></div>
+      <div role="listitem"><div class="big">91.85<em>点</em></div><p>第53回マーチングバンド全国大会（2025年12月）大編成・銀賞の得点</p></div>
+      <div role="listitem"><div class="big">約100<em>人規模</em></div><p>部員数（2025年2月時点・約100人）</p></div>
+    </div>
+    <p class="hero-note">※ 連続出場・通算記録（13年連続／通算22回／金賞10回）はWikipediaの記載に基づく二次情報。2024年12月時点では「12年連続21回目の出場・銀賞」と音楽メディア「ぶらあぼONLINE」が報じており、計算上は整合します。</p>
+
+    <figure class="drill">
+      <svg viewBox="0 0 900 210" role="img" aria-label="マーチングのドリル（隊形）を図案化したグラフィック">
+        <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#f0343f"/></marker></defs>
+        <g fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1"><path d="M0,35 H900 M0,87 H900 M0,140 H900 M0,192 H900"/><path d="M112,0 V210 M337,0 V210 M562,0 V210 M787,0 V210"/></g>
+        <path d="M90,170 C300,40 600,40 810,170" fill="none" stroke="#f0343f" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#ar)"/>
+        <g fill="#fdf8ee"><circle cx="90" cy="170" r="6"/><circle cx="210" cy="105" r="6"/><circle cx="330" cy="70" r="6"/><circle cx="450" cy="58" r="6" fill="#f0343f"/><circle cx="570" cy="70" r="6"/><circle cx="690" cy="105" r="6"/><circle cx="810" cy="170" r="6"/></g>
+        <g fill="#e8b7bc" font-family="Oswald,sans-serif" font-size="13" letter-spacing="3"><text x="90" y="198">SET 1</text><text x="420" y="198">ARC</text><text x="770" y="198">SET 2</text></g>
+      </svg>
+      <figcaption>ドリルチャート（隊形図）をモチーフにしたグラフィック。本ページでは実在の部員の写真は使用していません。</figcaption>
+    </figure>
+  </div>
+</header>
+
+<main>
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="no">01 / ABOUT</span><h2>部について</h2>
+    <p>部員主体で運営される、約100人規模の吹奏楽部。年間を通じて大会とステージが続き、「ほぼ毎月、本番がある」環境で鍛えられる。</p></div>
+    <div class="about-grid">
+      <div class="facts rv" aria-label="部の基本情報">
+        <dl>
+          <div class="row"><dt>正式名称</dt><dd>福岡大学附属大濠高等学校 吹奏楽部</dd></div>
+          <div class="row"><dt>部員数</dt><dd>約100人（2025年2月時点）</dd></div>
+          <div class="row"><dt>顧問</dt><dd>定松 理沙 先生</dd></div>
+          <div class="row"><dt>名誉顧問</dt><dd>浦川 義信 先生</dd></div>
+          <div class="row"><dt>活動日</dt><dd>水曜日・日曜日以外（定期考査1週間前から試験中は休み）</dd></div>
+          <div class="row"><dt>練習場所</dt><dd>本校吹奏楽室、体育館、グラウンド、校外の体育館</dd></div>
+        </dl>
+      </div>
+      <div class="pillars">
+        <div class="pillar rv"><h3><span class="en">FACE 01 — CONCERT</span>座奏</h3><p>吹奏楽コンクールに挑む、ステージでの演奏。音そのものの精度を磨く土台。</p></div>
+        <div class="pillar rv"><h3><span class="en">FACE 02 — PARADE CONTEST</span>全日本マーチングコンテスト</h3><p>吹奏楽連盟系の大会（通称「パレコン」）。演奏しながら動く、もう一つの全国への道。</p></div>
+        <div class="pillar rv"><h3><span class="en">FACE 03 — MARCHING BAND</span>マーチングバンド全国大会</h3><p>日本マーチングバンド協会の全国大会。年間テーマでショーを構築する、部の看板。</p></div>
+      </div>
+    </div>
+    <p class="src">出典：<a href="https://www.ohori.ed.jp/senior/club/school_band.html" target="_blank" rel="noopener">学校公式サイト 吹奏楽部ページ</a>／<a href="https://ebravo.jp/archives/183135" target="_blank" rel="noopener">ぶらあぼONLINE「ガンバレ！吹奏楽部！ぶらあぼブラス！vol.31」</a>（2025年2月18日公開）</p>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="no">02 / ACHIEVEMENTS</span><h2>実績</h2>
+    <p>確認できた結果のみを、大会名と出典つきで掲載する。看板はマーチングバンド全国大会の連続出場だ。</p></div>
+    <div class="tl">
+      <div class="tl-item rv"><div class="yr">2026</div><h3>九州の舞台で、今年も金賞</h3>
+        <p><span class="badge b-gold">金賞</span>第44回九州マーチングコンテスト（10月11日・福岡国際センター）高等学校以上の部 金賞<br>
+        <span class="badge b-gold">金賞</span>第20回マーチングバンド九州大会福岡県予選（9月6日・福岡国際センター）金賞 ― 第54回全国大会九州予選（別府ビーコンプラザ）への出場が決定<br>
+        <span class="badge b-red">特別賞</span>第9回九州マーチングフェスティバル（1月11日）優秀賞・審査員特別賞<br>
+        <span class="badge b-dark">出場</span>第65回博多どんたく港まつり「どんたく花のマーチングパレード」（5月4日）高等学校の部</p></div>
+      <div class="tl-item rv"><div class="yr">2025</div><h3>第53回全国大会、大編成で銀賞 91.85点</h3>
+        <p><span class="badge b-silver">銀賞</span>第53回マーチングバンド全国大会（12月7日・さいたまスーパーアリーナ）高等学校の部・大編成 銀賞（91.85点）<br>
+        <span class="badge b-gold">金賞</span>第43回九州マーチングコンテスト（10月12日）高等学校以上の部 金賞<br>
+        <span class="badge b-gold">金賞</span>第19回マーチングバンド九州大会福岡県予選（9月7日）金賞・ルネサンス賞<br>
+        <span class="badge b-silver">銀賞</span>第70回福岡吹奏楽コンクール（8月3日・福岡サンパレス）高等学校の部 銀賞 ― 課題曲III「マーチ『メモリーズ・リフレイン』」、自由曲「ブリュッセル・レクイエム」<br>
+        <span class="badge b-gold">金賞</span>第39回福岡県マーチングコンテスト（6月15日）金賞・福岡県代表<br>
+        <span class="badge b-gold">金賞</span>第27回全九州カラーガード・パーカッションコンテスト（6月22日）バスドラムアンサンブル 金賞・最優秀賞／カラーガード 金賞／パーカッション 金賞・審査員特別賞</p></div>
+      <div class="tl-item rv"><div class="yr">2024</div><h3>12年連続、21回目の全国大会</h3>
+        <p><span class="badge b-silver">銀賞</span>第52回マーチングバンド全国大会（12月・さいたまスーパーアリーナ）銀賞 ― 12年連続となる21回目の出場、テーマは「SOL（ソル）」<br>
+        <span class="badge b-gold">金賞</span>第52回マーチングバンド全国大会 九州予選（11月9日・島原復興アリーナ）金賞（全体2位）<br>
+        <span class="badge b-gold">金賞</span>第18回マーチングバンド九州大会福岡県予選（9月8日）金賞・九州大会推薦<br>
+        <span class="badge b-gold">金賞</span>全日本マーチングコンテスト 九州大会 金賞 ― 演目は「パイレーツ・オブ・ホリビアン」</p></div>
+      <div class="tl-item rv"><div class="yr">2017</div><h3>全国大会 金賞の年</h3>
+        <p><span class="badge b-gold">金賞</span>第45回マーチングバンド全国大会（12月17日・さいたまスーパーアリーナ）金賞<br>
+        <span class="badge b-gold">金賞</span>第62回福岡吹奏楽コンクール（7月28日）金賞／第35回九州マーチングコンテスト（10月15日）金賞／第31回福岡県マーチングコンテスト（6月11日）金賞</p></div>
+    </div>
+    <p class="src">出典：<a href="https://www.ohori.ed.jp/senior/club_report/school_band/" target="_blank" rel="noopener">学校公式サイト 部活動レポート（吹奏楽部）</a>／日本マーチングバンド協会 公式結果／朝日新聞 吹奏楽プラス／ぶらあぼONLINE／福岡ブラス♪（各結果の詳細は出典ページで確認できます）</p>
+  </div>
+</section>
+
+<!-- MARCHING -->
+<section id="marching" class="feature">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="no">03 / MARCHING</span><h2>マーチング特集</h2>
+    <p>年間テーマを掲げ、音楽・ドリル・ビジュアルを一つのショーとして構築する。名物は「チューバ回し」。パレコンの演目には「大濠電車でGO！」「怪盗大濠からの予告状」など、遊び心のあるタイトルも並ぶ。</p></div>
+    <div class="uniform">
+      <svg viewBox="0 0 300 340" role="img" aria-label="2025年にリニューアルした黒基調に赤を差したマーチング衣装の図案" class="rv">
+        <rect x="30" y="20" width="240" height="300" fill="#241611" stroke="#57443a"/>
+        <path d="M150 60 L105 120 V300 H195 V120 Z" fill="#0c0c0c" stroke="#f0343f" stroke-width="3"/>
+        <path d="M150 60 L105 120 H195 Z" fill="#5e1220"/>
+        <rect x="142" y="120" width="16" height="180" fill="#d9232e"/>
+        <circle cx="150" cy="86" r="9" fill="#f0343f"/>
+        <path d="M105 190 H195" stroke="#f5efe4" stroke-width="2" stroke-dasharray="5 5"/>
+        <text x="150" y="338" text-anchor="middle" fill="#cbbfa9" font-size="11" letter-spacing="2"></text>
+      </svg>
+      <div class="uniform-card rv">
+        <h3>2025年、新衣装。</h3>
+        <p>2025年にマーチング衣装をリニューアル。黒を基調に、大濠カラーのレッドを差し色にしたデザインになった。部のオリジナルグッズには、赤く光るリストバンドもある。</p>
+        <p>ショーのテーマは年ごとに設定される。2024年は「SOL（ソル）」、2025年は「Ouroboros」。</p>
+        <div class="chips"><span>2024 THEME — SOL</span><span>2025 THEME — OUROBOROS</span><span>名物 — チューバ回し</span></div>
+      </div>
+    </div>
+    <div class="showlist">
+      <div class="rv"><b>博多どんたく 花のマーチングパレード</b><span>2026年5月4日、第65回博多どんたく港まつりのパレードに高等学校の部で出場。地域の祭りでもフィールドの規律は崩さない。</span></div>
+      <div class="rv"><b>密着動画「THE BACK STAGE」</b><span>マーチング専門メディア「マーチングナビ」に、第51回マーチングバンド全国大会の裏側を追った密着動画（大濠高校吹奏楽部編）が掲載されている。</span></div>
+    </div>
+    <p class="src" style="color:#a08e73">出典：ぶらあぼONLINE（2025年2月18日）／福岡ブラス♪ 第51回定期演奏会レポート（2025年8月27日）／第65回博多どんたく港まつり公式プログラム／マーチングナビ</p>
+  </div>
+</section>
+
+<!-- CONCERT -->
+<section id="concert">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="no">04 / REGULAR CONCERT</span><h2>定期演奏会</h2>
+    <p>毎年8月、福岡サンパレス ホテル&amp;ホールで開催される、部の1年を締めくくるステージ。</p></div>
+    <div class="concert-card rv">
+      <div class="when"><small>第51回 定期演奏会 ― 開催実績</small>2025年 8月12日（火）<br>福岡サンパレス ホテル&amp;ホール</div>
+      <p style="margin:14px 0 0;font-size:15px">開場17:00／開演18:00（17:30からロビーでアンサンブル演奏）。この演奏会をもって、3年生が引退する。</p>
+      <div class="parts">
+        <div><b>第1部 ― 座奏</b><p>第1回定期演奏会から演奏される伝統曲「サンダークレスト」と、コンクール曲。</p></div>
+        <div><b>第2部 ― ポップス</b><p>パート別コスチュームなど、趣向を凝らしたポップスステージ。</p></div>
+        <div><b>第3部 ― マーチングステージ</b><p>フィールドのショーをステージで再現する、マーチングステージ。</p></div>
+      </div>
+    </div>
+    <p class="src">出典：<a href="https://fbrass.kirameki-ps.com/archives/3319" target="_blank" rel="noopener">福岡ブラス♪「第51回定期演奏会レポート」</a>（2025年8月27日）。次回（第52回）の開催情報は、本ページ制作時点では確認できていません。</p>
+  </div>
+</section>
+
+<!-- YEAR -->
+<section id="year" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="no">05 / ONE YEAR</span><h2>年間活動の流れ</h2>
+    <p>6月の福岡県マーチングコンテストを皮切りに、ほぼ毎月大会に出場する。3年生は8月の定期演奏会で多くが引退し、9月以降の大会は2年生中心の編成になる。</p></div>
+    <div class="flow rv">
+      <div class="row"><div class="season">春</div><p>博多どんたく港まつりのパレードに出場<small>過去にはハウステンボス マーチングフェスタ、ブラスステーション（福岡サンパレス）への出演実績も</small></p></div>
+      <div class="row"><div class="season">6月</div><p>福岡県マーチングコンテスト／全九州カラーガード・パーカッションコンテスト<small>大会シーズンの開幕</small></p></div>
+      <div class="row"><div class="season">夏</div><p>吹奏楽コンクール（座奏）／8月に定期演奏会 ― 3年生の引退ステージ<small>福岡サンパレス ホテル&amp;ホール</small></p></div>
+      <div class="row"><div class="season">秋</div><p>マーチングバンド九州大会福岡県予選／九州マーチングコンテスト<small>9月以降は2年生中心の編成で臨む</small></p></div>
+      <div class="row"><div class="season">12月</div><p>マーチングバンド全国大会（さいたまスーパーアリーナ）<small>1年の集大成。2025年は大編成・銀賞 91.85点</small></p></div>
+    </div>
+    <p class="src">出典：学校公式サイト 部活動レポート／ぶらあぼONLINE／学校公式サイト 吹奏楽部ページ（過去の出演実績）</p>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join" class="join">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="no" style="color:#ffd9dc">06 / FOR NEW MEMBERS</span><h2>入部希望の方へ</h2></div>
+    <p class="big-line rv">約100人で、全国のフィールドに立つ。<br>その一員になるということ。</p>
+    <p class="rv">活動日は水曜日・日曜日以外。練習場所は吹奏楽室、体育館、グラウンド、そして校外の体育館。座奏・パレコン・マーチングバンドの三つを同時に追う環境は、楽ではない。だが6月から12月まで本番が途切れない日々は、確実に人を強くする。楽器パートは木管・金管・打楽器・カラーガードまで多岐にわたり、全九州カラーガード・パーカッションコンテストで金賞・最優秀賞を取るセクションもある。まずは学校公式サイトの吹奏楽部ページと部活動レポートで、部の現在を確認してほしい。</p>
+    <a class="btn rv" href="https://www.ohori.ed.jp/senior/club/school_band.html" target="_blank" rel="noopener">学校公式サイトの吹奏楽部ページを見る</a>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section id="access">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="no">07 / ACCESS</span><h2>アクセス・学校情報</h2></div>
+    <div class="access-grid">
+      <div class="access-box rv"><h3>所在地</h3>
+        <p>福岡大学附属大濠高等学校<br>〒810-0044<br>福岡県福岡市中央区六本松一丁目12番1号<br>（大濠公園のすぐそば）</p>
+        <p style="font-size:13.5px;color:var(--sub)">最寄り：福岡市地下鉄七隈線「六本松駅」徒歩約5〜7分／空港線「大濠公園駅」徒歩15〜18分／西鉄バス「福大大濠中高前」徒歩1分</p>
+        <a class="btn" href="https://www.ohori.ed.jp/" target="_blank" rel="noopener">学校公式サイト</a>
+      </div>
+      <div class="access-box rv"><h3>学校の標語</h3>
+        <p style="font-size:14px;color:var(--sub)">高校の校訓として伝わる四つの言葉を、デザインの柱として掲げる。</p>
+        <div class="motto"><span>明朗闊達</span><span>自重敬他</span><span>研学錬体</span><span>進取創業</span></div>
+        <p style="font-size:12.5px;color:var(--sub);margin-top:14px">校章は、近隣の福岡城（舞鶴城）に由来する「舞鶴」の図案とされる。</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="disc">このサイトは吹奏楽部の生徒が制作した<strong>非公式ページ</strong>です。公式情報は福岡大学附属大濠高等学校の公式サイトをご確認ください。</div>
+    <div class="links">
+      <a href="https://www.ohori.ed.jp/" target="_blank" rel="noopener">学校公式サイト</a>
+      <a href="https://www.ohori.ed.jp/senior/club/school_band.html" target="_blank" rel="noopener">公式・吹奏楽部ページ</a>
+      <a href="https://www.ohori.ed.jp/senior/club_report/school_band/" target="_blank" rel="noopener">公式・部活動レポート</a>
+      <a href="https://ebravo.jp/archives/183135" target="_blank" rel="noopener">ぶらあぼONLINE 特集記事</a>
+    </div>
+    <p style="margin:0">掲載している実績・活動内容は、学校公式サイト、ぶらあぼONLINE、福岡ブラス♪、朝日新聞、日本マーチングバンド協会などの公開情報（2026年10月26日調査時点）に基づきます。通算記録の一部はWikipediaの記載による二次情報であり、本文中にその旨を明記しています。</p>
+    <small>OHORI WIND BAND — 福岡大学附属大濠高等学校 吹奏楽部（非公式ファンページ）</small>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.rv');
+  function showAll(){ els.forEach(function(el){ el.classList.add('on'); }); }
+  if(reduce || !('IntersectionObserver' in window)){ return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+  },{threshold:.1});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
